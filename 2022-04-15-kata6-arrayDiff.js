@@ -1,15 +1,4 @@
-/* function arrayDiff(a, b) {
-  const newArr = [];
-  a.forEach((number) => {
-    if (!b.includes(number)) newArr.push(number);
-  });
-  return newArr;
-} */
-
-const arrayDiff = (a, b) => {
-  const checkMatchWithB = checkMatch(b);
-  return a.filter(checkMatchWithB);
-};
+const arrayDiff = (a, b) => a.filter(checkMatch(b));
 
 const checkMatch = (arr) => {
   return (number) => {
