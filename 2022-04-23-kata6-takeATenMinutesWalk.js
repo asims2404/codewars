@@ -10,15 +10,15 @@ function isValidWalk(walk) {
   const walkLength = walk.length;
   if (walkLength !== 10) return false;
 
-  const opDirections = {
+  const directions = {
     n: 0,
     s: 0,
     e: 0,
     w: 0,
   };
-  walk.forEach((block) => (opDirections[block] += 1));
-  let sumNS = opDirections["n"] - opDirections["s"];
-  let sumEW = opDirections["e"] - opDirections["w"];
+  walk.forEach((block) => (directions[block] += 1));
+  let sumNS = directions["n"] - directions["s"];
+  let sumEW = directions["e"] - directions["w"];
   return sumEW === 0 && sumNS === 0;
 }
 
